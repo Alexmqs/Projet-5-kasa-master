@@ -1,6 +1,6 @@
 import './banner.scss'
 
-function Banner({ backgroundImage, text, height = '200px' }) {
+function Banner({ backgroundImage, text, height }) {
    const bannerStyle = {
       backgroundImage: `url(${backgroundImage})`,
       height: height,
