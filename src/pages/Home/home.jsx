@@ -13,20 +13,22 @@ function Home() {
    }, [])
 
    return (
-      <div className="home__style">
+      <div className="home">
          <Banner
             backgroundImage={backgroundImage}
             text="Chez vous, partout et ailleurs"
             height="200px"
          />
-         <div className="home__grid">
-            {accommodations.map((accommodation) => (
-               <Card
-                  key={accommodation.id}
-                  title={accommodation.title}
-                  cover={accommodation.cover}
-               />
-            ))}
+         <div className="home__background">
+            <div className="home__card">
+               {accommodations.map((accommodation) => (
+                  <Card
+                     key={accommodation.id}
+                     title={accommodation.title}
+                     cover={accommodation.cover}
+                  />
+               ))}
+            </div>
          </div>
       </div>
    )
