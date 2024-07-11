@@ -1,0 +1,29 @@
+.error-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.error-code {
+   margin: 50px 0px 0px 0px;
+   color: #ff5a5f;
+   font-size: 200px;
+   font-weight: 700;
+}
+
+.error-message {
+   color: #ff5a5f;
+   margin-bottom: 70px;
+   font-size: 30px;
+   font-weight: 500;
+   line-height: 51.34px;
+}
+
+.error-link {
+   margin-top: 40px;
+   margin-bottom: 100px;
+   text-decoration: none;
+   border-bottom: 1px solid #000;
+   font-family: Montserrat;
+   font-size: 18px;
+}
