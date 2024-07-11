@@ -1,3 +1,15 @@
 .About__style {
    padding: 0 100px;
 }
+
+.collapses {
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center; // Centre les collapses horizontalement
+}
+
+.collapse {
+   margin-top: 20px;
+   margin-bottom: 20px; // Ajoutez cet espace entre les collapses
+}
