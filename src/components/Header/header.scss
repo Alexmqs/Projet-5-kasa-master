@@ -20,3 +20,23 @@
       line-height: 34px;
    }
 }
+
+// Media queries pour 768px
+@media (max-width: 768px) {
+   .header {
+      padding: 5px;
+      &__logo {
+         height: 20px;
+      }
+   }
+}
+
+// Media queries pour 425px
+@media (max-width: 425px) {
+   .header {
+      padding: 5px;
+      &__logo {
+         height: 20px;
+      }
+   }
+}

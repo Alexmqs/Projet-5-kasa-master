@@ -5,9 +5,9 @@ import './aboutpage.scss'
 
 function About() {
    return (
-      <div className="About__style">
+      <div className="About">
          <Banner backgroundImage={backgroundImage} height="200px" />
-         <div className="collapses">
+         <div className="About__collapses">
             <Collapse
                title="Fiabilité"
                content={
