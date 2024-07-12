@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import './styles/stylesglobal.scss'
 import Home from './pages/Home/home'
-import HousingForm from './pages/Accommodation_sheet/Accommodationsheet'
+import HousingForm from './pages/Accommodation_sheet/accommodations'
 import About from './pages/About_page/aboutpage'
 import Error from './pages/Error/error'
 import Header from './components/Header/header'
@@ -15,7 +15,7 @@ ReactDOM.render(
          <Header />
          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Housing-form" element={<HousingForm />} />
+            <Route path="/accommodation/:id" element={<HousingForm />} />
             <Route path="/A-Propos" element={<About />} />
             <Route path="*" element={<Error />} />
          </Routes>

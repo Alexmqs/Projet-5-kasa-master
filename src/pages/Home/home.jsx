@@ -4,13 +4,20 @@ import Card from '../../components/Card/card'
 import backgroundImage from '../../assets/Bannerhome.png'
 import logements from '../../logements.json'
 import './home.scss'
+import { useNavigate } from 'react-router-dom'
 
 function Home() {
    const [accommodations, setAccommodations] = useState([])
+   const navigate = useNavigate()
 
    useEffect(() => {
       setAccommodations(logements)
    }, [])
+
+   const handleCardClick = (id) => {
+      console.log(`Navigating to /accommodation/${id}`)
+      navigate(`/accommodation/${id}`)
+   }
 
    return (
       <div className="home">
@@ -18,12 +25,14 @@ function Home() {
             backgroundImage={backgroundImage}
             text="Chez vous, partout et ailleurs"
             height="200px"
+            className="home__banner"
          />
          <div className="home__background">
             <div className="home__card">
                {accommodations.map((accommodation) => (
                   <Card
                      key={accommodation.id}
+                     onClick={() => handleCardClick(accommodation.id)}
                      title={accommodation.title}
                      cover={accommodation.cover}
                   />
