@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons'
 import logements from '../../logements.json'
 import Carrousel from '../../components/Carrousel/carrousel'
 import Collapse from '../../components/Collapse/collapse'
@@ -15,6 +17,30 @@ function HousingForm() {
          <br />
       </span>
    ))
+   const renderStars = (rating) => {
+      const stars = []
+      for (let i = 1; i <= 5; i++) {
+         if (i <= rating) {
+            stars.push(
+               <FontAwesomeIcon
+                  key={i}
+                  icon={solidStar}
+                  className="star star--filled"
+               />
+            )
+         } else {
+            stars.push(
+               <FontAwesomeIcon
+                  key={i}
+                  icon={solidStar}
+                  className="star star--empty"
+               />
+            )
+         }
+      }
+      return stars
+   }
+
    useEffect(() => {
       if (!accommodation) {
          navigate('/Erreur')
@@ -26,25 +52,45 @@ function HousingForm() {
    }
 
    return (
-      <div className="accommodation__sheet">
+      <div className="accommodation">
          <Carrousel pictures={accommodation.pictures} />
-         <h1>{accommodation.title}</h1>
-         <p>{accommodation.location}</p>
-         <div className="accommodation__host">
-            <img
-               src={accommodation.host.picture}
-               alt={`${accommodation.host.name} profile`}
-            />
-            <p>{accommodation.host.name}</p>
+         <div className="accommodation__titlegroup">
+            <div className="accommodation__titleloc">
+               <h1>{accommodation.title}</h1>
+               <p>{accommodation.location}</p>
+            </div>
+            <div className="accommodation__host">
+               <p>{accommodation.host.name}</p>
+               <img
+                  src={accommodation.host.picture}
+                  alt={`${accommodation.host.name} profile`}
+               />
+            </div>
          </div>
-         <p>{accommodation.tags}</p>
-         <p>{accommodation.rating}</p>
-
-         <Collapse
-            title="Description"
-            content={<p>{accommodation.description}</p>}
-         />
-         <Collapse title="Equipement" content={<p>{equipmentContent}</p>} />
+         <div className="accommodation__tagsrating">
+            <div className="accommodation__tags">
+               {accommodation.tags.map((tag, index) => (
+                  <span key={index} className="accommodation__tag">
+                     {tag}
+                  </span>
+               ))}
+            </div>
+            <div className="accommodation__rating">
+               {renderStars(accommodation.rating)}
+            </div>
+         </div>
+         <div className="accommodation__collapse">
+            <Collapse
+               title="Description"
+               content={<p>{accommodation.description}</p>}
+               className="accommodation__collapse--description"
+            />
+            <Collapse
+               title="Equipement"
+               content={<p>{equipmentContent}</p>}
+               className="accommodation__collapse--equipment"
+            />
+         </div>
       </div>
    )
 }
