@@ -10,6 +10,21 @@
 }
 
 .collapse {
+   width: 80%;
    margin-top: 20px;
    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+   .collapse {
+      width: 100%;
+      margin: 10px 0;
+   }
+}
+
+@media (max-width: 768px) {
+   .collapse {
+      width: 100%;
+      margin: 10px 0;
+   }
 }

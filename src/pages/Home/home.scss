@@ -17,24 +17,44 @@
       gap: 30px;
       margin: 30px 0px 30px 0px;
    }
+   &__banner {
+      height: 200px;
+   }
+   &__text {
+      height: 200px;
+      font-size: 46px;
+      text-align: center;
+   }
 }
 
-// Media queries pour 768px
 @media (max-width: 768px) {
    .home {
-      padding: 0px;
+      padding: 0px 20px;
       &__background {
          background-color: transparent;
+      }
+      &__banner {
+         height: 100px;
+      }
+      &__text {
+         font-size: 26px;
+         text-align: left;
       }
    }
 }
 
-// Media queries pour 425px
 @media (max-width: 425px) {
    .home {
-      padding: 0px;
+      padding: 0px 20px;
       &__background {
          background-color: transparent;
+      }
+      &__banner {
+         height: 100px;
+      }
+      &__text {
+         font-size: 26px;
+         text-align: left;
       }
    }
 }

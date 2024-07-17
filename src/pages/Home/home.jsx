@@ -15,7 +15,6 @@ function Home() {
    }, [])
 
    const handleCardClick = (id) => {
-      console.log(`Navigating to /accommodation/${id}`)
       navigate(`/accommodation/${id}`)
    }
 
@@ -24,8 +23,8 @@ function Home() {
          <Banner
             backgroundImage={backgroundImage}
             text="Chez vous, partout et ailleurs"
-            height="200px"
-            className="home__banner"
+            textClass="home__text"
+            bannerClass="home__banner"
          />
          <div className="home__background">
             <div className="home__card">

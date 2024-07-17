@@ -18,7 +18,6 @@ function About() {
                      équipes.
                   </p>
                }
-               width="80%"
             />
             <Collapse
                title="Respect"
@@ -29,7 +28,6 @@ function About() {
                      du voisinage entraînera une exclusion de notre plateforme.
                   </p>
                }
-               width="80%"
             />
             <Collapse
                title="Service"
@@ -40,7 +38,6 @@ function About() {
                      du voisinage entraînera une exclusion de notre plateforme.
                   </p>
                }
-               width="80%"
             />
             <Collapse
                title="Sécurité"
@@ -55,7 +52,6 @@ function About() {
                      la sécurité domestique pour nos hôtes.
                   </p>
                }
-               width="80%"
             />
          </div>
       </div>
