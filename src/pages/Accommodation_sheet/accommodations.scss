@@ -78,13 +78,6 @@ $background-color_1: #c4c4c4;
    }
    &__collapse {
       display: flex;
-      gap: 20px;
-
-      &--description,
-      &--equipment {
-         flex: 1;
-         border-radius: 20px;
-         padding: 10px;
-      }
+      gap: 100px;
    }
 }

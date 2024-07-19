@@ -1,14 +1,15 @@
 import './banner.scss'
 
-function Banner({ backgroundImage, text, textClass, bannerClass }) {
-   const bannerStyle = {
+function Banner({ backgroundImage, text, textClass, imgClass, bannerClass }) {
+   const imgStyle = {
       backgroundImage: `url(${backgroundImage})`,
    }
 
    return (
-      <div className={`banner ${bannerClass}`} style={bannerStyle}>
-         <div className="banner__overlay"></div>
-         <h2 className={`banner__text ${textClass}`}>{text}</h2>
+      <div className={`banner ${bannerClass}`}>
+         <div className={`banner__img ${imgClass}`} style={imgStyle}>
+            <h2 className={`banner__text ${textClass}`}>{text}</h2>
+         </div>
       </div>
    )
 }

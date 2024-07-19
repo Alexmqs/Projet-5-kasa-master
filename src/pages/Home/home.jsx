@@ -23,8 +23,9 @@ function Home() {
          <Banner
             backgroundImage={backgroundImage}
             text="Chez vous, partout et ailleurs"
-            textClass="home__text"
             bannerClass="home__banner"
+            imgClass="home__img"
+            textClass="home__text"
          />
          <div className="home__background">
             <div className="home__card">
