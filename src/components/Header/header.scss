@@ -5,7 +5,12 @@
    padding: 20px 100px 20px 100px;
 
    &__logo {
-      height: 50px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      img {
+         max-height: 100%;
+      }
    }
 
    &__nav {
@@ -17,8 +22,7 @@
       color: black;
       font-size: 24px;
       font-weight: 500;
-      line-height: 34px;
-      text-decoration: none;
+      line-height: 17px;
    }
    &__link.active {
       text-decoration: underline;
@@ -28,9 +32,11 @@
 // Media queries pour 768px
 @media (max-width: 768px) {
    .header {
-      padding: 5px;
+      padding: 20px 20px 20px 20px;
       &__logo {
-         height: 20px;
+         height: 40px;
+         display: flex;
+         align-items: center;
       }
    }
 }
@@ -38,9 +44,12 @@
 // Media queries pour 425px
 @media (max-width: 425px) {
    .header {
-      padding: 5px;
+      padding: 20px 20px 20px 20px;
       &__logo {
          height: 20px;
+      }
+      &__link {
+         font-size: 16px;
       }
    }
 }
