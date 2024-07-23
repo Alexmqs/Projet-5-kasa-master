@@ -11,6 +11,16 @@ function HousingForm() {
    const { id } = useParams()
    const navigate = useNavigate()
    const accommodation = logements.find((logement) => logement.id === id)
+   useEffect(() => {
+      if (!accommodation) {
+         navigate('/Erreur')
+      }
+   }, [accommodation, navigate])
+
+   if (!accommodation) {
+      return null
+   }
+
    const equipmentContent = accommodation.equipments.map((equipment, index) => (
       <span key={index}>
          {equipment}
@@ -39,16 +49,6 @@ function HousingForm() {
          }
       }
       return stars
-   }
-
-   useEffect(() => {
-      if (!accommodation) {
-         navigate('/Erreur')
-      }
-   }, [accommodation, navigate])
-
-   if (!accommodation) {
-      return null
    }
 
    return (
