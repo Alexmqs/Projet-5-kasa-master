@@ -6,7 +6,13 @@ import './aboutpage.scss'
 function About() {
    return (
       <div className="About">
-         <Banner backgroundImage={backgroundImage} height="200px" />
+         <Banner
+            backgroundImage={backgroundImage}
+            text=""
+            bannerClass="About__banner"
+            imgClass="About__img"
+            textClass="About__text"
+         />
          <div className="About__collapses">
             <Collapse
                title="Fiabilité"
