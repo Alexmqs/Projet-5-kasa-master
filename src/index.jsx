@@ -15,14 +15,16 @@ const root = createRoot(container)
 root.render(
    <React.StrictMode>
       <Router>
-         <Header />
-         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/accommodation/:id" element={<HousingForm />} />
-            <Route path="/A-Propos" element={<About />} />
-            <Route path="*" element={<Error />} />
-         </Routes>
-         <Footer />
+         <div className="app">
+            <Header />
+            <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/accommodation/:id" element={<HousingForm />} />
+               <Route path="/A-Propos" element={<About />} />
+               <Route path="*" element={<Error />} />
+            </Routes>
+            <Footer />
+         </div>
       </Router>
    </React.StrictMode>
 )

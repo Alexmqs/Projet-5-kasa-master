@@ -57,6 +57,14 @@
    }
 }
 
+@media (max-width: 1024px) {
+   .home {
+      &__cardtitleClass {
+         font-size: 14px;
+      }
+   }
+}
+
 @media (max-width: 768px) {
    .home {
       padding: 0 20px;
