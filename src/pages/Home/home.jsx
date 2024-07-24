@@ -28,16 +28,17 @@ function Home() {
             textClass="home__text"
          />
          <div className="home__background">
-            <div className="home__card">
-               {accommodations.map((accommodation) => (
-                  <Card
-                     key={accommodation.id}
-                     onClick={() => handleCardClick(accommodation.id)}
-                     title={accommodation.title}
-                     cover={accommodation.cover}
-                  />
-               ))}
-            </div>
+            {accommodations.map((accommodation) => (
+               <Card
+                  key={accommodation.id}
+                  onClick={() => handleCardClick(accommodation.id)}
+                  title={accommodation.title}
+                  cover={accommodation.cover}
+                  cardClass="home__cardClass"
+                  cardcoverClass="home__cardcoverClass"
+                  cardtitleClass="home__cardtitleClass"
+               />
+            ))}
          </div>
       </div>
    )

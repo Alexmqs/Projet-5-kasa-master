@@ -1,10 +1,21 @@
 import './card.scss'
 
-function Card({ onClick, title, cover }) {
+function Card({
+   onClick,
+   title,
+   cover,
+   cardClass,
+   cardcoverClass,
+   cardtitleClass,
+}) {
    return (
-      <div className="card" onClick={onClick}>
-         <img src={cover} alt={title} className="card__cover" />
-         <h2 className="card__title">{title}</h2>
+      <div className={`card ${cardClass}`} onClick={onClick}>
+         <img
+            src={cover}
+            alt={title}
+            className={`card__cover ${cardcoverClass}`}
+         />
+         <h2 className={`card__title ${cardtitleClass}`}>{title}</h2>
       </div>
    )
 }

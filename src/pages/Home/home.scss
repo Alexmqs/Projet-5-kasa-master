@@ -1,31 +1,17 @@
 .home {
    padding: 0 100px;
 
-   &__background {
-      background-color: rgba(161, 161, 161, 0.3);
-      border-radius: 20px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      border: rgba(161, 161, 161, 0) solid 1px;
-   }
-
-   &__card {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width: 100%;
-      gap: 30px;
-      margin: 30px 0px 30px 0px;
-   }
    &__banner {
-      margin-top: 50px;
+      margin-top: 10px;
       height: 200px;
       position: relative;
    }
+
    &__img {
       width: 100%;
       height: 100%;
    }
+
    &__text {
       background-color: rgba(0, 0, 0, 0.4);
       height: 100%;
@@ -35,47 +21,94 @@
       align-items: center;
       justify-content: center;
    }
-}
 
-@media (max-width: 1024px) {
-   .home {
-      &__banner {
-         height: 150px;
-      }
-      &__text {
-         font-size: 35px;
-      }
+   //arrière plan
+   &__background {
+      background-color: rgba(161, 161, 161, 0.3);
+      border-radius: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: rgba(161, 161, 161, 0) solid 1px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+
+   //Card
+   &__cardClass {
+      margin-top: 20px;
+      width: 30%;
+      aspect-ratio: 1 / 1;
+      margin-bottom: 20px;
+   }
+
+   //Image
+   &__cardcoverClass {
+      height: 85%;
+      width: 100%;
+      object-fit: cover;
+   }
+
+   //Titre
+   &__cardtitleClass {
+      margin: 10px;
+      font-size: 20px;
+      color: white;
    }
 }
 
 @media (max-width: 768px) {
    .home {
-      padding: 0px 20px;
+      padding: 0 20px;
+
       &__background {
          background-color: transparent;
+         flex-direction: column;
+         align-items: center;
       }
+
       &__banner {
          height: 120px;
       }
+
       &__text {
          font-size: 26px;
          padding: 20px;
          justify-content: left;
+      }
+
+      &__cardClass {
+         width: 100%;
+         aspect-ratio: 1 / 1;
+      }
+
+      &__cardtitleClass {
+         font-size: 16px;
+      }
+      &__cardcoverClass {
+         height: 92%;
       }
    }
 }
 
 @media (max-width: 425px) {
    .home {
-      padding: 0px 20px;
+      padding: 0 20px;
+
       &__background {
          background-color: transparent;
       }
+
       &__banner {
          height: 100px;
       }
       &__text {
          font-size: 26px;
+      }
+
+      &__cardClass {
+         width: 100%;
+         aspect-ratio: 1 / 1;
       }
    }
 }
