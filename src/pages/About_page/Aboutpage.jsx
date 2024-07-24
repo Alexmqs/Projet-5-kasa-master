@@ -16,6 +16,8 @@ function About() {
          <div className="About__collapses">
             <Collapse
                title="Fiabilité"
+               collapseClass="About__collapseClass"
+               collapseheaderClass="About__collapseheaderClass"
                content={
                   <p>
                      Les annonces postées sur Kasa garantissent une fiabilité
@@ -27,6 +29,8 @@ function About() {
             />
             <Collapse
                title="Respect"
+               collapseClass="About__collapseClass"
+               collapseheaderClass="About__collapseheaderClass"
                content={
                   <p>
                      La bienveillance fait partie des valeurs fondatrices de
@@ -37,6 +41,8 @@ function About() {
             />
             <Collapse
                title="Service"
+               collapseClass="About__collapseClass"
+               collapseheaderClass="About__collapseheaderClass"
                content={
                   <p>
                      La bienveillance fait partie des valeurs fondatrices de
@@ -47,6 +53,8 @@ function About() {
             />
             <Collapse
                title="Sécurité"
+               collapseClass="About__collapseClass"
+               collapseheaderClass="About__collapseheaderClass"
                content={
                   <p>
                      La sécurité est la priorité de Kasa. Aussi bien pour nos

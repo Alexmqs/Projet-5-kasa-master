@@ -1,16 +1,18 @@
 .collapse {
-   width: 100%;
-   margin: 20px 0;
    cursor: pointer;
 
    &__header {
       background-color: #ff5a5f;
-      padding: 10px;
-      font-weight: bold;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: white;
+   }
+   &__title {
+      margin-left: 10px;
+   }
+   &__icon {
+      margin-right: 10px;
    }
 
    &__content {
@@ -32,17 +34,5 @@
       &.open {
          transform: rotate(180deg);
       }
-   }
-}
-
-@media (max-width: 1024px) {
-   .collapse {
-      width: 100%;
-   }
-}
-
-@media (max-width: 767px) {
-   .collapse {
-      width: 100%;
    }
 }
