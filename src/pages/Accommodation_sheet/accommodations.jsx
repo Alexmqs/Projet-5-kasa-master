@@ -54,32 +54,38 @@ function HousingForm() {
    return (
       <div className="accommodation">
          <Carrousel pictures={accommodation.pictures} />
-         <div className="accommodation__titlegroup">
-            <div className="accommodation__titleloc">
-               <h1>{accommodation.title}</h1>
-               <p>{accommodation.location}</p>
+
+         <div className="accommodation__info">
+            <div className="accommodation__info--accommodation">
+               <div className="accommodation__titleloc">
+                  <h1>{accommodation.title}</h1>
+                  <p>{accommodation.location}</p>
+               </div>
+               <div className="accommodation__tags">
+                  {accommodation.tags.map((tag, index) => (
+                     <span key={index} className="accommodation__tag">
+                        {tag}
+                     </span>
+                  ))}
+               </div>
             </div>
-            <div className="accommodation__host">
-               <p className="accommodation__name">{accommodation.host.name}</p>
-               <img
-                  className="accommodation__img"
-                  src={accommodation.host.picture}
-                  alt={`${accommodation.host.name} profile`}
-               />
+            <div className="accommodation__info--personne">
+               <div className="accommodation__host">
+                  <p className="accommodation__name">
+                     {accommodation.host.name}
+                  </p>
+                  <img
+                     className="accommodation__img"
+                     src={accommodation.host.picture}
+                     alt={`${accommodation.host.name} profile`}
+                  />
+               </div>
+               <div className="accommodation__rating">
+                  {renderStars(accommodation.rating)}
+               </div>
             </div>
          </div>
-         <div className="accommodation__tagsrating">
-            <div className="accommodation__tags">
-               {accommodation.tags.map((tag, index) => (
-                  <span key={index} className="accommodation__tag">
-                     {tag}
-                  </span>
-               ))}
-            </div>
-            <div className="accommodation__rating">
-               {renderStars(accommodation.rating)}
-            </div>
-         </div>
+
          <div className="accommodation__collapse">
             <Collapse
                title="Description"

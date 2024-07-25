@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import './collapse.scss'
 
 const Collapse = ({ title, content, collapseClass, collapseheaderClass }) => {
@@ -18,7 +18,7 @@ const Collapse = ({ title, content, collapseClass, collapseheaderClass }) => {
          >
             <span className="collapse__title">{title}</span>
             <span className={`collapse__icon ${isOpen ? 'open' : ''}`}>
-               <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+               <FontAwesomeIcon icon={faChevronUp} />
             </span>
          </div>
          <div className={`collapse__content ${isOpen ? 'open' : 'closed'}`}>
