@@ -35,7 +35,7 @@ function HousingForm() {
                <FontAwesomeIcon
                   key={i}
                   icon={solidStar}
-                  className="star star--filled"
+                  className="star star__filled"
                />
             )
          } else {
@@ -43,7 +43,7 @@ function HousingForm() {
                <FontAwesomeIcon
                   key={i}
                   icon={solidStar}
-                  className="star star--empty"
+                  className="star star__empty"
                />
             )
          }
@@ -60,8 +60,9 @@ function HousingForm() {
                <p>{accommodation.location}</p>
             </div>
             <div className="accommodation__host">
-               <p>{accommodation.host.name}</p>
+               <p className="accommodation__name">{accommodation.host.name}</p>
                <img
+                  className="accommodation__img"
                   src={accommodation.host.picture}
                   alt={`${accommodation.host.name} profile`}
                />
@@ -82,11 +83,15 @@ function HousingForm() {
          <div className="accommodation__collapse">
             <Collapse
                title="Description"
+               collapseClass="accommodation__collapseClass"
+               collapseheaderClass="accommodation__collapseheaderClass"
                content={<p>{accommodation.description}</p>}
                className="accommodation__collapse--description"
             />
             <Collapse
                title="Equipement"
+               collapseClass="accommodation__collapseClass"
+               collapseheaderClass="accommodation__collapseheaderClass"
                content={<p>{equipmentContent}</p>}
                className="accommodation__collapse--equipment"
             />

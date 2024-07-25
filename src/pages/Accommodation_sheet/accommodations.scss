@@ -26,18 +26,18 @@ $background-color_1: #c4c4c4;
    &__host {
       display: flex;
       align-items: center;
-
-      p {
-         color: $color_1;
-         font-size: 18px;
-         width: 50px;
-      }
-      img {
-         width: 100px;
-         height: 100px;
-         background-color: $background-color_1;
-         border-radius: 50%;
-      }
+      justify-content: flex-end;
+   }
+   &__name {
+      color: $color_1;
+      font-size: 22px;
+      width: 40%;
+      text-align: right;
+      margin-right: 10px;
+   }
+   &__img {
+      border-radius: 50%;
+      width: 90px;
    }
 
    &__tagsrating {
@@ -45,7 +45,7 @@ $background-color_1: #c4c4c4;
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 10px;
    }
 
    &__tags {
@@ -78,6 +78,18 @@ $background-color_1: #c4c4c4;
    }
    &__collapse {
       display: flex;
-      gap: 100px;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 30px;
+   }
+   &__collapseClass {
+      width: 40%;
+   }
+   &__collapseheaderClass {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 25px;
+      padding: 10px;
+      border-radius: 10px;
    }
 }
