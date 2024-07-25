@@ -68,11 +68,11 @@ $background-color_1: #c4c4c4;
    }
    .star {
       font-size: 30px;
-      &--filled {
+      &__filled {
          color: $color_1;
       }
 
-      &--empty {
+      &__empty {
          color: $color_2;
       }
    }
