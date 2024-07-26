@@ -32,21 +32,9 @@ function HousingForm() {
       const stars = []
       for (let i = 1; i <= 5; i++) {
          if (i <= rating) {
-            stars.push(
-               <FontAwesomeIcon
-                  key={i}
-                  icon={solidStar}
-                  className="star star__filled"
-               />
-            )
+            stars.push(<FontAwesomeIcon key={i} icon={solidStar} className="star star__filled" />)
          } else {
-            stars.push(
-               <FontAwesomeIcon
-                  key={i}
-                  icon={solidStar}
-                  className="star star__empty"
-               />
-            )
+            stars.push(<FontAwesomeIcon key={i} icon={solidStar} className="star star__empty" />)
          }
       }
       return stars
@@ -72,18 +60,14 @@ function HousingForm() {
             </div>
             <div className="accommodation__info--personne">
                <div className="accommodation__host">
-                  <p className="accommodation__name">
-                     {accommodation.host.name}
-                  </p>
+                  <p className="accommodation__name">{accommodation.host.name}</p>
                   <img
                      className="accommodation__img"
                      src={accommodation.host.picture}
                      alt={`${accommodation.host.name} profile`}
                   />
                </div>
-               <div className="accommodation__rating">
-                  {renderStars(accommodation.rating)}
-               </div>
+               <div className="accommodation__rating">{renderStars(accommodation.rating)}</div>
             </div>
          </div>
 

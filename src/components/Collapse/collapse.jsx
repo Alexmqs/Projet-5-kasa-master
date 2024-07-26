@@ -13,18 +13,13 @@ const Collapse = ({ title, content, collapseClass, collapseheaderClass }) => {
 
    return (
       <div className={`collapse ${collapseClass}`}>
-         <div
-            className={`collapse__header ${collapseheaderClass}`}
-            onClick={toggleCollapse}
-         >
+         <div className={`collapse__header ${collapseheaderClass}`} onClick={toggleCollapse}>
             <span className="collapse__title">{title}</span>
             <span className={`collapse__icon ${isOpen ? 'open' : ''}`}>
                <FontAwesomeIcon icon={faChevronUp} />
             </span>
          </div>
-         <div className={`collapse__content ${isOpen ? 'open' : 'closed'}`}>
-            {content}
-         </div>
+         <div className={`collapse__content ${isOpen ? 'open' : 'closed'}`}>{content}</div>
       </div>
    )
 }

@@ -12,17 +12,13 @@ function Header() {
          <nav className="header__nav">
             <NavLink
                to="/"
-               className={({ isActive }) =>
-                  isActive ? 'header__link active' : 'header__link'
-               }
+               className={({ isActive }) => (isActive ? 'header__link active' : 'header__link')}
             >
                Accueil
             </NavLink>
             <NavLink
                to="/A-Propos"
-               className={({ isActive }) =>
-                  isActive ? 'header__link active' : 'header__link'
-               }
+               className={({ isActive }) => (isActive ? 'header__link active' : 'header__link')}
             >
                A propos
             </NavLink>
