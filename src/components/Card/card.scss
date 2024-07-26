@@ -1,7 +1,9 @@
+@import '../../styles/stylesglobal.scss';
+
 .card {
    display: flex;
    flex-direction: column;
-   background: #ff5a5f;
+   background: $red-color;
    border-radius: 10px;
    transition: transform 0.3s ease-in-out;
    cursor: pointer;

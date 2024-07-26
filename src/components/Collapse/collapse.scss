@@ -1,12 +1,14 @@
+@import '../../styles/stylesglobal.scss';
+
 .collapse {
    cursor: pointer;
 
    &__header {
-      background-color: #ff5a5f;
+      background-color: $red-color;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: white;
+      color: $white-color;
    }
    &__title {
       margin-left: 10px;
@@ -16,7 +18,7 @@
    }
 
    &__content {
-      background-color: #f9f9f9;
+      background-color: $light-gray-color;
       padding: 10px;
 
       &.open {

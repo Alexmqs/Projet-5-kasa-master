@@ -1,6 +1,4 @@
-$color_1: #ff5a5f;
-$color_2: #c4c4c4;
-$background-color_1: #c4c4c4;
+@import '../../styles/stylesglobal.scss';
 
 .accommodation {
    margin-top: 30px;
@@ -20,7 +18,7 @@ $background-color_1: #c4c4c4;
 
    &__titleloc {
       h1 {
-         color: $color_1;
+         color: $red-color;
          font-size: 36px;
          margin-top: 10px;
       }
@@ -38,7 +36,7 @@ $background-color_1: #c4c4c4;
    }
 
    &__tag {
-      background-color: $color_1;
+      background-color: $red-color;
       color: white;
       border-radius: 15px;
       padding: 5px 30px;
@@ -59,7 +57,7 @@ $background-color_1: #c4c4c4;
    }
 
    &__name {
-      color: $color_1;
+      color: $red-color;
       font-size: 22px;
       width: 40%;
       text-align: right;
@@ -78,10 +76,10 @@ $background-color_1: #c4c4c4;
       font-size: 30px;
 
       &__filled {
-         color: $color_1;
+         color: $red-color;
       }
       &__empty {
-         color: $color_2;
+         color: $gray-color;
       }
    }
 
