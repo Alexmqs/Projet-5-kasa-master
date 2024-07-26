@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './error.scss'
 
+//Page d'erreur de redirection en cas de mauvaise URL
 function Error() {
    return (
       <div className="error">

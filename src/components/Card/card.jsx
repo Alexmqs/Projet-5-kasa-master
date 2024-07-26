@@ -1,5 +1,6 @@
 import './card.scss'
 
+//Gestion des cartes image/titre
 function Card({
    onClick,
    title,

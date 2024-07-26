@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import './header.scss'
 import logo from '../../assets/KasaRedLogo.png'
 
+// Gestion de l'en-tête et du lien actif sur la page
 function Header() {
    return (
       <header className="header">

@@ -1,5 +1,6 @@
 import './banner.scss'
 
+//Gestion des bannières avec image/texte
 function Banner({ backgroundImage, text, textClass, imgClass, bannerClass }) {
    const imgStyle = {
       backgroundImage: `url(${backgroundImage})`,

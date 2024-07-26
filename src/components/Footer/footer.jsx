@@ -1,6 +1,7 @@
 import './footer.scss'
 import logo from '../../assets/KasaWhiteLogo.png'
 
+//Pied de page
 function Footer() {
    return (
       <footer className="footer">

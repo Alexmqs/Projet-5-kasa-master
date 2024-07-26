@@ -4,8 +4,9 @@ import {
    faChevronLeft,
    faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
-import './carrousel.scss' // Assurez-vous d'importer le fichier SCSS
+import './carrousel.scss'
 
+//Gestion du carrousel et des images à l'intérieur
 const Carousel = ({ pictures }) => {
    const [currentIndex, setCurrentIndex] = useState(0)
 

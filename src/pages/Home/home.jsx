@@ -6,6 +6,8 @@ import logements from '../../logements.json'
 import './home.scss'
 import { useNavigate } from 'react-router-dom'
 
+// Page d'accueil avec les composants bannière et carte
+
 function Home() {
    const [accommodations, setAccommodations] = useState([])
    const navigate = useNavigate()

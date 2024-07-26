@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import './collapse.scss'
 
+//Gestion du collapse : ouverture et fermeture
 const Collapse = ({ title, content, collapseClass, collapseheaderClass }) => {
    const [isOpen, setIsOpen] = useState(false)
 

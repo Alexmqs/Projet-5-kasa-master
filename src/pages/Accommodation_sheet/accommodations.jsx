@@ -7,6 +7,7 @@ import Carrousel from '../../components/Carrousel/carrousel'
 import Collapse from '../../components/Collapse/collapse'
 import './accommodations.scss'
 
+//Page de logement composée d'un carrousel et des informations sur le bien prises dans logements.json
 function HousingForm() {
    const { id } = useParams()
    const navigate = useNavigate()

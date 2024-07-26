@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
+//Pour enlever le contour sur la page
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
+//Mise en place de la police d'ecriture
 body {
    font-family: Montserrat;
 }
 
+//Gestion pour que le footer soit tout en bas
 .app {
    min-height: 100vh;
    display: flex;

@@ -3,6 +3,7 @@ import backgroundImage from '../../assets/Bannerabout.png'
 import Collapse from '../../components/Collapse/collapse'
 import './aboutpage.scss'
 
+//Page À propos composée d'une bannière et de collapses
 function About() {
    return (
       <div className="About">
